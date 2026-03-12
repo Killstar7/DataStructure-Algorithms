@@ -16,9 +16,10 @@ public class A_02_Min_K_Consecutive_bit_Flips {
         }
         System.out.println("enter the k:");
         int k= sc.nextInt();
+        System.out.println("ans is "+kBitFlips(arr,k));
 
     }
-    public int kBitFlips(int[] arr, int k){
+    static int kBitFlips(int[] arr, int k){
         int ans=0;
         int n=arr.length;
 
