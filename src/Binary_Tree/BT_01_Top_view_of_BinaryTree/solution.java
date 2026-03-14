@@ -1,4 +1,4 @@
-package Binary_Tree;
+package Binary_Tree.BT_01_Top_view_of_BinaryTree;
 
 import java.util.*;
 
@@ -48,7 +48,7 @@ public class B_01_Top_view_of_BinaryTree {
        q.add(new pair(root, vertical));
        /*
        we are storing the Vertical Distance-> VD in the key section of the map because we want to have only one value per VD.
-       and we are storing the Binary_Tree.Node data in the value section.
+       and we are storing the Binary_Tree.BT_01_Top_view_of_BinaryTree.Node data in the value section.
         */
         Map<Integer,Integer> mp=new TreeMap<>();
         /*
@@ -60,7 +60,7 @@ public class B_01_Top_view_of_BinaryTree {
                 pair pair=q.poll();
 
                 mp.putIfAbsent(pair.second,pair.first.data);
-                /*Binary_Tree.pair stores node in first and vertical distance in second
+                /*Binary_Tree.BT_01_Top_view_of_BinaryTree.pair stores node in first and vertical distance in second
                 so when we go to left we should decrease the VD and when we go to right we should increase it.
 
                  */
