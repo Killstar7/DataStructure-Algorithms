@@ -21,7 +21,7 @@ class pair {
         this.second = second;
     }
 }
-public class B_01_Top_view_of_BinaryTree {
+public class solution {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         Node root = new Node(10);

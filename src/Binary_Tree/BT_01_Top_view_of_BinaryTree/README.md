@@ -56,31 +56,46 @@ Given a binary tree, return an `ArrayList` of integers representing the **top vi
 ## Java Code
 
 ```java
-static ArrayList<Integer> topView(Node root) {
-    Queue<pair> q = new LinkedList<>();
-    int vertical = 0;
-    q.add(new pair(root, vertical));
+class Solution {
+    static ArrayList<Integer> topView(Node root) {
+        // code here
+        Queue<pair> q=new LinkedList<>();
+        int vertical=0;
+        q.add(new pair(root, vertical));
+       /*
+       we are storing the Vertical Distance-> VD in the key section of the map because we want to have only one value per VD.
+       and we are storing the Node data in the value section.
+        */
+        Map<Integer,Integer> mp=new TreeMap<>();
+        while(!q.isEmpty()){
+            int s=q.size();
+            for(int i=0;i<s;i++){
+                pair pair=q.poll();
 
-    // TreeMap to store vertical distance -> node data
-    Map<Integer, Integer> mp = new TreeMap<>();
+                mp.putIfAbsent(pair.second,pair.first.data);
+                /*pair stores node in first and vertical distance in second
+                so when we go to left we should decrease the VD and when we go to right we should increase it.
 
-    while (!q.isEmpty()) {
-        int s = q.size();
-        for (int i = 0; i < s; i++) {
-            pair pair = q.poll();
+                 */
 
-            // Store node data if this vertical distance is seen first time
-            mp.putIfAbsent(pair.second, pair.first.data);
+                if(pair.first.left!=null) q.add(new pair(pair.first.left,pair.second-1));
+                if(pair.first.right!=null) q.add(new pair(pair.first.right, pair.second+1));
 
-            // Add left and right children with updated vertical distances
-            if (pair.first.left != null)
-                q.add(new pair(pair.first.left, pair.second - 1));
-            if (pair.first.right != null)
-                q.add(new pair(pair.first.right, pair.second + 1));
+            }
         }
+
+        return new ArrayList<>(mp.values());
     }
 
-    return new ArrayList<>(mp.values());
+    static class pair {
+        Node first;//stores the node
+        int second;//stores the vertical distance
+
+        pair(Node first, int second) {
+            this.first = first;
+            this.second = second;
+        }
+    }
 }
 ```
 
