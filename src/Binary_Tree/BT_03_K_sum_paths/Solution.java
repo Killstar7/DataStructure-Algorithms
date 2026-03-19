@@ -61,7 +61,8 @@ public class Solution {
 
         cur += node.data;
 
-        if (mp.containsKey(cur - k)) count[0] += mp.getOrDefault(cur - k, 0);
+        if (mp.containsKey(cur - k))
+            count[0] += mp.getOrDefault(cur - k, 0);
 
         mp.put(cur, mp.getOrDefault(cur, 0) + 1);
 
