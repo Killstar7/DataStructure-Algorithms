@@ -1,5 +1,7 @@
 package Binary_Tree.Largest_BST;
 
+import java.util.zip.Checksum;
+
 class Node {
     int data;
     Node left, right;
@@ -13,43 +15,49 @@ class Node {
 
 public class solution {
     public static void main(String[] args) {
+        Node root = new Node(5);
+
+        root.left = new Node(2);
+        root.right = new Node(4);
+
+        root.left.left = new Node(1);
+        root.left.right = new Node(3);
+
+        System.out.println(largestBst(root));
 
     }
 
     static int largestBst(Node root) {
         // Write your code here
-        return largestBSTBT(root).mxSz;
-
-
+       return helper(root).count;
 
     }
-    static BSTInfo largestBSTBT(Node root) {
-        if (root == null)
-            return new BSTInfo(Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
 
-        BSTInfo left = largestBSTBT(root.left);
-        BSTInfo right = largestBSTBT(root.right);
+    static check helper(Node node) {
+    if(node == null)
+        return new check(0, Integer.MIN_VALUE,Integer.MAX_VALUE);
 
-        // Check if the current subtree is a BST
-        if (left.maxi < root.data && right.mini > root.data) {
-            return new BSTInfo(Math.min(left.mini, root.data),
-                    Math.max(right.maxi, root.data),
-                    1 + left.mxSz + right.mxSz);
-        }
+    check left = helper(node.left);
+    check right = helper(node.right);
 
-        return new BSTInfo(Integer.MIN_VALUE, Integer.MAX_VALUE, Math.max(left.mxSz, right.mxSz));
+    if(node.data > left.max && node.data < right.min)
+        return new check(left.count + right.count + 1, Math.max(right.max, node.data),Math.min(node.data,left.min));
+
+    return new check(Math.max(left.count, right.count), Integer.MAX_VALUE,Integer.MIN_VALUE);
+
     }
 
-        static class BSTInfo {
-            int mini;
-            int maxi;
-            int mxSz;
+    static class check {
+        int max;
+        int min;
+        int count;
 
-            BSTInfo(int mn, int mx, int sz) {
-                mini = mn;
-                maxi = mx;
-                mxSz = sz;
-            }
+        check(int count, int max, int min) {
+            this.max = max;
+            this.min = min;
+            this.count = count;
         }
+    }
+
 
 }
