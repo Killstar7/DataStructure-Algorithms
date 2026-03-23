@@ -1,4 +1,4 @@
-package Binary_Tree.Predecessor_Successor;
+package Binary_Tree.BT_07_Predecessor_Successor;
 
 import java.util.ArrayList;
 
@@ -104,6 +104,5 @@ public class solution {
             PostS(node.left, key, post);
         }
     }
-
 
 }
