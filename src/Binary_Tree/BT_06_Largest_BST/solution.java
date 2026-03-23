@@ -1,6 +1,4 @@
-package Binary_Tree.Largest_BST;
-
-import java.util.zip.Checksum;
+package Binary_Tree.BT_06_Largest_BST;
 
 class Node {
     int data;
