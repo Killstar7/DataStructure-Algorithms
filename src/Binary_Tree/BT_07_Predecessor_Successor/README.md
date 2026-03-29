@@ -1,7 +1,7 @@
 ```markdown
 # Predecessor and Successor in BST
 
-This repository contains both **Iterative** and **Recursive** Java solutions to find the **Inorder Predecessor** and **Inorder Successor** of a given key in a Binary Search Tree (BST).
+
 
 * **Predecessor:** The largest node value smaller than the given key.
 * **Successor:** The smallest node value larger than the given key.
