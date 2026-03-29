@@ -1,6 +1,4 @@
-package Dynamic_Programming.DP_02_Partion_with_given_difference;
-
-import java.util.Arrays;
+package Dynamic_Programming.DP_02_Partition_with_given_difference;
 
 public class solution {
     public static void main(String[] args) {
