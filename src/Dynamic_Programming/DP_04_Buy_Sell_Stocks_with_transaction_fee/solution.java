@@ -1,8 +1,8 @@
-package Dynamic_Programming.Buy_Sell_Stocks_with_transaction_fee;
+package Dynamic_Programming.DP_04_Buy_Sell_Stocks_with_transaction_fee;
 
 import java.util.Arrays;
 
-public class Buy_sell_multipleTransaction_with_fee {
+public class solution {
     public static void main(String[] args) {
         int[] arr = {6, 1, 7, 2, 8, 4};
         int k = 2;
