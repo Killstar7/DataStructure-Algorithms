@@ -1,4 +1,4 @@
-package arrays.XOR_after_range_multiplication_queries_1;
+package arrays.A_08_XOR_after_range_multiplication_queries_1;
 
 public class Solution {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Solution {
         int qn = queries.length;
         int MOD = 1000000000 + 7;
 
-
         for (int i = 0; i < qn; i++) {
 
             int idx = queries[i][0];
@@ -28,8 +27,8 @@ public class Solution {
             }
         }
         int xor = 0;
-        for (int i = 0; i < n; i++) {
-            xor ^= nums[i];
+        for (int num : nums) {
+            xor ^= num;
         }
 
         return xor;
