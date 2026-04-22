@@ -1,4 +1,4 @@
-package arrays.Two_Furthest_houses_with_different_colours_2078;
+package arrays.A_18_Two_Furthest_houses_with_different_colours_2078;
 
 /*
 2078. Two Furthest Houses With Different Colors
