@@ -1,4 +1,4 @@
-package String;
+package String.S_01_generate_all_IP_addresses;
 
 import java.util.ArrayList;
 import java.util.Scanner;
