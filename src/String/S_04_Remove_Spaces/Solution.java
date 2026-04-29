@@ -1,4 +1,4 @@
-package String.S_03_Remove_Spaces;
+package String.S_04_Remove_Spaces;
 
 /*
   Remove Spaces
