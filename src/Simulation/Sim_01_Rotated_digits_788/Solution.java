@@ -1,4 +1,4 @@
-package Simulation.Rotated_digits_788;
+package Simulation.Sim_01_Rotated_digits_788;
 
 /*
      788. Rotated Digits
