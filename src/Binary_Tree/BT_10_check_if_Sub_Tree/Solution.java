@@ -1,6 +1,7 @@
 package Binary_Tree.BT_10_check_if_Sub_Tree;
 /*
-    Check if subtree
+    Check if subtree Q
+
     Difficulty: Mediu
     Given two binary trees with roots root1 (for tree T) and root2 (for tree S), each containing at most N nodes.
     Determine whether tree S is a subtree of tree T.
