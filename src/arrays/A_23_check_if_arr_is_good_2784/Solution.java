@@ -8,13 +8,11 @@ package arrays.A_23_check_if_arr_is_good_2784;
         You are given an integer array nums. We consider an array good if it is a permutation of an array base[n].
 
         base[n] = [1, 2, ..., n - 1, n, n] (in other words, it is an array of length n + 1 which contains 1 to n - 1 exactly once,
-         plus two occurrences of n). For example, base[1] = [1, 1] and base[3] = [1, 2, 3, 3].
+        plus two occurrences of n). For example, base[1] = [1, 1] and base[3] = [1, 2, 3, 3].
 
         Return true if the given array is good, otherwise return false.
 
         Note: A permutation of integers represents an arrangement of these numbers.
-
-
 
         Example 1:
 
@@ -45,8 +43,8 @@ package arrays.A_23_check_if_arr_is_good_2784;
         Input: nums = [3, 4, 4, 1, 2, 1]
         Output: false
         Explanation: Since the maximum element of the array is 4, the only candidate n for which this array could
-         be a permutation of base[n], is n = 4. However, base[4] has five elements but array nums has six.
-          Therefore, it can not be a permutation of base[4] = [1, 2, 3, 4, 4]. So the answer is false.
+        be a permutation of base[n], is n = 4. However, base[4] has five elements but array nums has six.
+        Therefore, it can not be a permutation of base[4] = [1, 2, 3, 4, 4]. So the answer is false.
 
 
         Constraints:
@@ -54,10 +52,13 @@ package arrays.A_23_check_if_arr_is_good_2784;
         1 <= nums.length <= 100
         1 <= num[i] <= 200
  */
+
 public class Solution {
     public static void main(String[] args) {
 
     }
+
+    //function to check if arr is good
     static boolean isGood(int[] nums) {
 
         int n = 0;
